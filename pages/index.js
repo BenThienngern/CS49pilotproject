@@ -11,6 +11,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Image
+      src="/ripobama.jpg"
+      alt="Obama's death"
+      width={200}
+      height={200}
+      />
+
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
