@@ -12,7 +12,8 @@ export default function Home() {
       </Head>
 
       <Image
-      src="ripobama.jpg"
+      src="/ripobama.jpg"
+      alt="Obama's death"
       width={200}
       height={200}
       />
