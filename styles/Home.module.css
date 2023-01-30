@@ -108,6 +108,77 @@
   margin-left: 0.5rem;
 }
 
+
+.top1 {
+  position: absolute;
+  width: 107px;
+  height: 32px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.top2 {
+  position: absolute;
+  width: 175px;
+  height: 32px;
+  left: 200px;
+
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+
+  display: flex;
+  align-items: center;
+
+  color: black;
+}
+.top3 {
+  position: absolute;
+  width: 152px;
+  height: 32px;
+  left: calc(50% - 152px / 2 + 132px);
+  top: calc(50% - 32px / 2);
+
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+
+  display: flex;
+  align-items: center;
+
+  color: black;
+}
+.top4 {
+  position: absolute;
+  width: 82px;
+  height: 32px;
+  left: calc(50% - 82px / 2 + 311px);
+  top: calc(50% - 32px / 2);
+
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+
+  display: flex;
+  align-items: center;
+
+  color: black;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
