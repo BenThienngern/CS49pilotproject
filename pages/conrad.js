@@ -12,7 +12,7 @@ export default function Conrad() {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <h1 className={styles.title}>Conrad&apos;s Page : &#41;</h1>
+        <h1 className={styles.title}>Conrad&apos;s Pages : &#41;</h1>
       </main>
     </div>
   );
