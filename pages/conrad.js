@@ -11,9 +11,15 @@ export default function Conrad() {
         <link rel="icon" href="/compsci 49 (1) 1.ico" />
       </Head>
       <Navbar />
-      <h1>Hi all,</h1>
+      <head>
+      </head>
+      <body>
+      
+      <h1 style={{color:"blue"}}>Hi all,</h1>
       <p>This is a personal page for Conrad Poon.</p>
       <img src="ripobama.jpg"></img>
+
+      </body>
       <main className={styles.main}>
         <h1 className={styles.title}>Conrad&apos;s Page : &#41;</h1>
       </main>
