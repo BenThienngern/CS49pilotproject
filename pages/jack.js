@@ -6,6 +6,8 @@ import React, { useState, useEffect } from "react";
 export default function Jack() {
     const [colorIndex, setColorIndex] = useState(0);
     const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    const [fontSize, setFontSize] = useState(20);
+    const [fontDirection, setFontDirection] = useState(1);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -13,6 +15,18 @@ export default function Jack() {
         }, 5);
         return () => clearInterval(intervalId);
     }, [colorIndex]);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (fontSize >= 40) {
+                setFontDirection(-1);
+            } else if (fontSize <= 10) {
+                setFontDirection(1);
+            }
+            setFontSize(fontSize + fontDirection);
+        }, 50);
+        return () => clearInterval(intervalId);
+    }, [fontSize]);
 
     return (
         <div className={styles.container} style={{ backgroundColor: colors[colorIndex] }}>
@@ -27,7 +41,7 @@ export default function Jack() {
                     style={{
                         fontFamily: "Comic Sans",
                         fontWeight: 550,
-                        fontSize: "20px",
+                        fontSize: `${fontSize}px`,
                     }}
                 >
                     I'm Jack and I really hope you don't have epilepsy
@@ -35,6 +49,7 @@ export default function Jack() {
             </main>
         </div>
     );
+
 }
 
 // Written using a trained version of ChatGPT
