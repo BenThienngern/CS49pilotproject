@@ -12,7 +12,7 @@ export default function Yoyo() {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <h1 className={styles.title}>Yoyo&apos;s Page : &#41;</h1>
+        <h1 className={styles.title}>yOYo&apos;s Page : &#41;</h1>
       </main>
     </div>
   );
