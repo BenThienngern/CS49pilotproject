@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Text } from "@nextui-org/react";
 
-export default function Navigatiionbar() {
+export default function NavigationBar() {
   return (
     <Navbar isBordered variant={"sticky"}>
       <Text b color="inherit" hideIn="xs">
@@ -9,7 +9,7 @@ export default function Navigatiionbar() {
       </Text>
       <Navbar.Content hideIn="xs">
         <Navbar.Link href="/">Home Page</Navbar.Link>
-        <Navbar.Link href="/personal">Personal Page</Navbar.Link>
+        <Navbar.Link href="/personal">Personal Pages</Navbar.Link>
       </Navbar.Content>
     </Navbar>
   );
