@@ -3,6 +3,18 @@ import styles from "../styles/Home.module.css";
 import Navbar from "./components/navbar";
 
 export default function Yoyo() {
+  const html = `
+  <html>
+    <main>
+          <form action="input.html" method = "GET">
+              <label>Tell me Your Wish -></label>
+              <input>
+              <button>Toss a Coin In The Well</button>
+        </form>
+    </main>
+  </body>
+</html>`;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +27,11 @@ export default function Yoyo() {
       <main className={styles.main}>
         <h1 className={styles.title}>yOYo&apos;s Page : &#41;</h1>
         <img src={"/yoyo.jpg"} width="400" height="400" boarder-radius="10" />
+
         <p className={styles.red} >@yOYo</p>
+        
+        {/* This to run the earlier work*/}
+        <div dangerouslySetInnerHTML={{ __html: html }} /> 
       </main>
     </div>
   );
