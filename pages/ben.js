@@ -3,6 +3,33 @@ import styles from "../styles/Home.module.css";
 import Navbar from "./components/navbar";
 
 export default function Ben() {
+  const html = `
+  <html>
+  <head>
+    <title>My Next.js Page</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Hello, World!</h1>
+      <p>This is a sample Next.js page.</p>
+    </main>
+  </body>
+</html>`;
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +39,8 @@ export default function Ben() {
       </Head>
       <Navbar />
       <main className={styles.main}>
+        {/* pure html calling below */}
+        <div dangerouslySetInnerHTML={{ __html: html }} />
         <div
           style={{
             marginLeft: "120px",

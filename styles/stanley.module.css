@@ -1,0 +1,53 @@
+#frame{
+    border-spacing: 5px;
+}
+
+#frame td{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+#currentPlayer{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#currentPlayer span{
+    line-height: 30px;
+    vertical-align: top;
+}
+
+#currentPlayer div{
+    display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.teamOrange{
+    background-color: orangered !important;
+}
+
+.teamBlue{
+    background-color: blue !important;
+}
+
+#victory{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    background-color: white;
+}
+
+#victoryText{
+    text-align: center;
+    display: block;
+    line-height: 100px;
+}
