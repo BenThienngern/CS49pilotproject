@@ -29,6 +29,10 @@ export default function Conrad() {
         This is a personal page for Conrad Poon.
       </p>      
       
+      <audio controls autoplay width="100">
+        <source src="depechemode.mp3" type="audio/mp3"/>
+      </audio>
+
       <img src="IMG_0360.JPG" width="30%" height="30%" alt="Fei Fei" class="animate__animated animate__fadeInRight"
         style={{
           display:"block",
