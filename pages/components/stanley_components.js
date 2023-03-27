@@ -5,6 +5,54 @@ import { SSRProvider } from "react-bootstrap";
 import Navbar from "./navbar";
 import React from "react";
 
+class Touchpad extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            pixels: Array.from({length: 1024}, (v, i) => 0),
+            down: false
+        }
+
+        this.press = this.press.bind(this);
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle(){
+        this.setState({down: !this.state.down});
+    }
+
+    deactivate(){
+        this.setState({down: false});
+    }
+
+    press(event){
+        if(this.state.down){
+            let el = event.target;
+            let x = Array.from(el.parentNode.children).indexOf(el);
+            let y = Array.from(el.parentNode.parentNode.children).indexOf(el.parentNode);
+            this.state.pixels[y * 32 + x] = 1;
+            this.setState({board: this.state.pixels});
+        }
+    }
+
+    render(){
+        let table = [];
+        for(let i = 0; i < 32; i++){
+            let row = [];
+            for(let j = 0; j < 32; j++){
+                row.push((<td key={`${i}-${j}`} onMouseMove={this.press} className={styles.padPixel} style={{opacity: this.state.pixels[i * 32 + j]}}></td>));
+            }
+            table.push((<tr key={i}>{row}</tr>));
+        }
+        return (
+            <table id={styles.pad} onMouseLeave={this.deactivate} onMouseDown={this.toggle} onMouseUp={this.toggle}>
+                <tbody>{table}</tbody>
+            </table>
+        );
+    }
+}
+
 class ConnectFour extends React.Component{
     constructor(props){
         super(props);
@@ -166,6 +214,13 @@ export function AppBody(){
                 </Row>
                 <Row justify="center">
                     <h2 style={{margin:0}}>Interactive Code in React</h2>
+                </Row>
+                <Spacer y={1} />
+                <Row justify="center">
+                    <h3>Touchpad</h3>
+                </Row>
+                <Row justify="center">
+                    <Touchpad />
                 </Row>
                 <Spacer y={1} />
                 <Row justify="center">
